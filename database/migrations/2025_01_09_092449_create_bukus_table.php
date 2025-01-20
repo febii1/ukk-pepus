@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
-            $table->foreignId ('kategori_id')->constrained (table : 'kategori buku');
-            $table->string ('judul');
-            $table->string ('penulis');
-            $table->string ('penerbit');
-            $table->string ('tahun_terbit');
-            $table->timestamps();
+            $table->foreignId('kategori_id')-> constrained(table: 'kategori_buku'); 
+                $table-> string('kdbuku');  
+                $table-> string('judul');
+                $table-> string('penulis');
+                $table-> string('penerbit');
+                $table-> string('tahun_terbit');
+                $table->timestamps();
         });
     }
 

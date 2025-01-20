@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function pinjams()
+    {
+        return $this->hasMany(Pinjam::class);
+    }
+    public function ulasans()
+    {
+        return $this->hasMany(Ulasan::class);
+    }
 }
